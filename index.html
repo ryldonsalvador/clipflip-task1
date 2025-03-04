@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
+    />
+    <title>300x250 Interactive Banner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide slide-1" data-slide="1">
+            <video id="video-1" muted playsinline poster="./img/poster1.jpg">
+              <source src="./videos/video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="slide slide-2" data-slide="2">
+            <video id="video-2" muted playsinline poster="./img/poster2.jpg">
+              <source src="./videos/video2.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="slide slide-3" data-slide="3">
+            <video id="video-3" muted playsinline poster="./img/poster3.jpg">
+              <source src="./videos/video3.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="slide slide-4" data-slide="4">
+            <video id="video-4" muted playsinline poster="./img/poster4.jpg">
+              <source src="./videos/video4.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="pagination" id="pagination">
+        <div class="line-1 lines"></div>
+        <div class="line-2 lines"></div>
+        <div class="line-3 lines"></div>
+        <div class="line-4 lines"></div>
+      </div>
+      <div class="content-container">
+        <div class="slide1-content slides-content">
+          <div class="text1">Polo Ralph Lauren</div>
+          <div class="text2">CLASSIC FIT PLAID FLANNEL</div>
+          <div class="text3">€170,00 <span>inkl. MwSt.</span></div>
+        </div>
+        <div class="slide2-content slides-content">
+          <div class="text1">Florucci</div>
+          <div class="text2">PARACHUTE PANTS - Stoffhose</div>
+          <div class="text3">$320,00 <span>inkl. MwSt.</span></div>
+          <div class="text4">
+            Originalpreis:&nbsp<span class="price-orig">€400,00</span>&nbsp<span
+              class="price-discount"
+              >-20%</span
+            >
+          </div>
+        </div>
+        <div class="slide3-content slides-content">
+          <div class="text1">Isaac Dewhirst</div>
+          <div class="text2">THE FASHION SUIT - Anzug</div>
+          <div class="text3">€96,95 <span>inkl. MwSt.</span></div>
+          <div class="text4">
+            Originalpreis:&nbsp<span class="price-orig">€174,95</span>&nbsp<span
+              class="price-discount"
+              >-45%</span
+            >
+          </div>
+        </div>
+        <div class="slide4-content slides-content">
+          <div class="text1">Boss</div>
+          <div class="text2">STRIKE - Uhr</div>
+          <div class="text3">$206,95 <span>inkl. MwSt.</span></div>
+          <div class="text4">
+            Originalpreis:&nbsp<span class="price-orig">€229,95</span>&nbsp<span
+              class="price-discount"
+              >-10%</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="pad" id="btn-left-click">
+          <button id="prev">❮</button>
+        </div>
+        <div class="pad" id="btn-right-click">
+          <button id="next">❯</button>
+        </div>
+      </div>
+      <div class="logo">
+        <a href="javascript:window.open(window.clickTag);void(0)">
+          <img src="./img/logo.svg" />
+        </a>
+      </div>
+      <div class="cta-button">
+        <a href="javascript:window.open(window.clickTag);void(0)">
+          Jetzt entdecken <img src="./img/arrow.svg" />
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.google.com";
+    </script>
+  </body>
+</html>
