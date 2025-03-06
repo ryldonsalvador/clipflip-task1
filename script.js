@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prev = document.getElementById("btn-left-click");
   const next = document.getElementById("btn-right-click");
   let index = 1;
+  let autoPlayInterval;
 
   main.style.display = "block";
   // automatically move the last slide to the left side on load
@@ -160,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.removeChild(lastSlide);
       }, 500); // Wait for the transition duration
     }
+    stopAutoPlay();
   }
 
   function pauseAllVideos() {
@@ -167,9 +169,24 @@ document.addEventListener("DOMContentLoaded", function () {
     videos.forEach((video) => video.pause()); // Pause each video
   }
 
+  // Function to start autoplay
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+      moveSlide(1);
+    }, 2000); // Change slide every 2 seconds
+  }
+
+  // Function to stop autoplay
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+
   next.addEventListener("click", () => moveSlide(1));
   prev.addEventListener("click", () => moveSlide(-1));
 
   updateSlides();
   detectSlides();
+
+  // Start autoplay initially
+  startAutoPlay();
 });
