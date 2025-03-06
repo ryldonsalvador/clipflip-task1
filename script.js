@@ -161,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.removeChild(lastSlide);
       }, 500); // Wait for the transition duration
     }
-    stopAutoPlay();
   }
 
   function pauseAllVideos() {
@@ -181,8 +180,14 @@ document.addEventListener("DOMContentLoaded", function () {
     clearInterval(autoPlayInterval);
   }
 
-  next.addEventListener("click", () => moveSlide(1));
-  prev.addEventListener("click", () => moveSlide(-1));
+  next.addEventListener("click", () => {
+    moveSlide(1);
+    stopAutoPlay();
+  });
+  prev.addEventListener("click", () => {
+    moveSlide(-1);
+    stopAutoPlay();
+  });
 
   updateSlides();
   detectSlides();
